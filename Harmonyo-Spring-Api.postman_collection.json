@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "7c1bbc1d-9a95-4fef-8434-083884db1264",
+		"name": "Harmonyo-Spring-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26025073"
+	},
+	"item": [
+		{
+			"name": "Exibir Todos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2guZG9lQGdtYWlsLmNvbSIsImlhdCI6MTY4MDkxMDc0NCwiZXhwIjoxNjg0NTEwNzQ0fQ.D6uA5sdJJ6mTaZ5YL4foDkS1z3hzG2SOiYyvgNtC0WI",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exibir Alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/alunos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"alunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exibir Professores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/professores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"professores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"nome\": \"Duarte\",\r\n                \"email\": \"duarte@gmail.com\",\r\n                \"cpf\": \"693.664.230-60\",\r\n                \"sexo\": \"Masculino\",\r\n                \"senha\": \"1234\",\r\n                \"categoria\": \"Aluno\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/cadastro/aluno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"cadastro",
+						"aluno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Professor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Junin\",\r\n    \"email\": \"Vinicius@gmail.com\",\r\n    \"cpf\": \"693.664.230-60\",\r\n    \"sexo\": \"Masculino\",\r\n    \"senha\": \"12346789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/cadastro/professor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"cadastro",
+						"professor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"duarte@gmail.com\",\r\n    \"senha\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Profesor Por Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/busca/professor?nome=Vinicius+Alves",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"busca",
+						"professor"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Vinicius+Alves"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Aluno Por Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/busca/aluno?nome=Duarte",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"busca",
+						"aluno"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Duarte"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exibe Todos Por Ordem Alfabética",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/alfabetica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"alfabetica"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exibe Professores Por Ordem Alfabética",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/professores/alfabetica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"professores",
+						"alfabetica"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exibe Alunos Por Ordem Alfabética",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/alunos/alfabetica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"alunos",
+						"alfabetica"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
